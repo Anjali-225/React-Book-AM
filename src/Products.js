@@ -9,7 +9,7 @@ class Products extends Component {
 
         return (
             <div> 
-                <ul>{listProducts}</ul>
+            <ul>{listProducts}</ul>
             </div>
         );
     }
