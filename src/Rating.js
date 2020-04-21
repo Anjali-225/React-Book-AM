@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { IoIosStar, IoIosStarOutline } from 'react-icons/io';
 
 class Rating extends Component {
+
     handleClick = (ratingValue) => {
         this.setState({rating: ratingValue});
     };
@@ -10,11 +11,11 @@ class Rating extends Component {
         super(props);
         this.state = {rating: this.props.rating};
     }
-
+   //<h1>Rating: {this.state.rating}</h1>
     render() {
         return (
-        <div>
-            <h1>Rating: {this.state.rating}</h1>
+        <div style= {styles.starStyle}>
+         
 
             {this.state.rating >= 1 ? (
                 <IoIosStar onClick={this.handleClick.bind(this,1)} />
@@ -47,3 +48,9 @@ class Rating extends Component {
     }
 }
 export default Rating;
+
+const styles={
+    starStyle:{
+        color: 'orange'
+    }
+}
